@@ -1,0 +1,93 @@
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 10px 0;
+  max-width: 700px;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.profile-top {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.profile-image-container {
+  flex: 0 0 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.profile-details {
+  flex: 1;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  font-weight: 700;
+  color: #000;
+}
+
+.profile-sub {
+  font-size: 0.9rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.profile-desc {
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin-bottom: 12px;
+  width: 100%; 
+  box-sizing: border-box; 
+  color: #000;
+}
+
+.profile-tags {
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.profile-footer {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

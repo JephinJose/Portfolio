@@ -1,0 +1,106 @@
+.overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1500;
+  backdrop-filter: blur(4px);
+
+  /* show backdrop instantly when open */
+  opacity: 1;
+  visibility: hidden;
+  pointer-events: none;
+    transition: visibility 0s linear 0.1s, opacity 0.1s ease; /* faster fade out */
+
+  &.open {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1; /* stays opaque, no fade while opening */
+    transition: visibility 0s linear 0s, opacity 0.35s ease; /* fade out only when closing */
+  }
+}
+
+.overlay-container {
+  width: 100%;
+  height: 65%;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow-y: auto;
+
+  &.open {
+    transform: translateY(0);
+  }
+}
+
+.overlay-handle {
+  width: 40px;
+  height: 5px;
+  background: #ccc;
+  border-radius: 3px;
+  margin: 10px auto;
+  cursor: grab;
+}
+
+.overlay-content {
+  padding: 1rem 1.25rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.overlay-section {
+  margin-bottom: 1.5rem;
+}
+
+.overlay-section-header {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+
+  .section-icon {
+    margin-right: 0.5rem;
+  }
+}
+
+.overlay-section hr {
+  border: none;
+  border-bottom: 1px solid #eee;
+  margin: 0.5rem 0 1rem;
+}
+
+.overlay-item {
+  background: #f9f9f9;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #f0f0f0;
+  }
+
+  &.primary {
+    background: #000;
+    color: #fff;
+
+    .chevron {
+      color: #fff;
+    }
+  }
+}
+
+.chevron {
+  font-size: 1rem;
+  color: #666;
+}
