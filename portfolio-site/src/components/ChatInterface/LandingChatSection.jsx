@@ -52,6 +52,7 @@ export function LandingChatSection() {
 
   const navigateToHome = () => {
       setChatStarted(false);
+      setMessage("");
     };
 
   const handleSectionClick = (index, sectionMessage) => {
@@ -112,7 +113,7 @@ export function LandingChatSection() {
             onChange={(e) => setMessage(e.target.value)}
           />
           <button type="submit" className="landingchat-submit">
-            <FiChevronRight color="#000000" className="landingPageSubmit-icon"/>
+            <FiChevronRight/>
           </button>
         </form>
       </div>
