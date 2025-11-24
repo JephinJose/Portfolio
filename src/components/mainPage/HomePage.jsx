@@ -5,7 +5,7 @@ import { LandingPage } from "./LandingPage";
 
 export function HomePage() {
   return (
-    <div className="landing-page">
+    <div>
       <LandingPage/>
     </div>
   );

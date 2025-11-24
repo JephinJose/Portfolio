@@ -120,9 +120,10 @@ export function ExperienceTimeline() {
       <aside className="timeline-rail">
         <div className="timeline-rail__sticky">
           <div className="timeline-rail__title">
-            <div className="eyebrow">THE EXPERIENCE</div>
+            <div className="eyebrow"></div>
             <h2>
-              Experience That <span className="accent">Brings Ideas to Life</span>
+              Professional Experience
+              {/* <span className="accent">Brings Ideas to Life</span> */}
             </h2>
           </div>
           <div className="timeline-rail__line" ref={railRef}>

@@ -11,6 +11,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { RiHome7Fill } from "react-icons/ri";
 import { ChatWindow } from "./ChatWindow";
 import "./LandingChatSection.less";
+import GlassSurface from '../ui/GlassSurface'
 
 export function LandingChatSection() {
   const [message, setMessage] = useState("");
@@ -117,6 +118,31 @@ export function LandingChatSection() {
           </button>
         </form>
       </div>
+
+      {/* <div style={{ width: "31.25rem", maxWidth: "90vw" }}>
+        <GlassSurface
+          displace={0.5}
+          distortionScale={-180}
+          redOffset={0}
+          greenOffset={10}
+          blueOffset={20}
+          brightness={60}
+          opacity={0.93}
+          mixBlendMode="screen"
+        >
+          <input
+            type="text"
+            className="chat-input"
+            placeholder="Ask me anything..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <button type="submit" className="landingchat-submit">
+            <FiChevronRight/>
+          </button>
+        </GlassSurface>
+      
+      </div> */}
 
       {/* Section buttons */}
       <div>

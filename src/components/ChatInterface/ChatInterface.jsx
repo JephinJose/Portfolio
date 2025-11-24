@@ -10,7 +10,7 @@ export function ChatInterface() {
     <div className="chat-interface">
         <SunsetBackground/>
         <div className="birds-background">
-            <BirdsBackground />
+          <BirdsBackground />
         </div>
         <LandingChatSection/>
     </div>
